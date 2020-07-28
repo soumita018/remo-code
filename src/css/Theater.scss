@@ -1,0 +1,173 @@
+.remo-theater {
+  // margin-left: -378px;
+  // margin-top: -300px;
+
+  .rt-app-bar {
+    text-align: right;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    background-color: #e2ffcf;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px 0px rgba(104, 98, 98, 0.596);
+    z-index: 4;
+    .rt-profile-image {
+      height: 80px;
+      width: 80px;
+      border-radius: 50px;
+      margin-right: 20px;
+    }
+    .rt-user-detail {
+      display: flex;
+      flex-direction: column;
+
+      .rt-logout-button {
+        background-color: #ec6868;
+        color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        align-self: center;
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+  }
+
+  .rt-rooms {
+    position: absolute;
+    user-select: none;
+    z-index: 1;
+    .rt-room {
+      position: absolute;
+      cursor: pointer;
+
+      .rt-avatar {
+        cursor: pointer;
+        img {
+          width: 50px;
+          height: 50px;
+          background-color: #fff;
+          border-radius: 50px;
+          border: solid #38a824 3px;
+          animation: Avatar-animate 400ms;
+        }
+      }
+      .rt-avatar.animate {
+        animation: Avatar-user 600ms;
+      }
+
+      .rt-room-name {
+        font-size: 0.875rem;
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      &:hover {
+        background: rgba($color: #000000, $alpha: 0.1);
+        border-radius: 4px;
+      }
+    }
+  }
+  .rt-background {
+    position: absolute;
+    img {
+      object-fit: cover;
+    }
+  }
+  .rt-add-user-btn,
+  .rt-table-limit,
+  .find-me {
+    position: fixed;
+    color: #fff;
+    font-size: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: #459b42;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+    height: 70px;
+    bottom: 30px;
+  }
+
+  .rt-add-user-btn {
+    display: grid;
+    place-items: center;
+    width: 70px;
+    left: 30px;
+  }
+  .rt-table-limit {
+    width: 100px;
+    right: 30px;
+    padding: 0 20px;
+    outline: none;
+  }
+  .find-me {
+    right: 150px;
+    padding: 0 20px;
+    outline: none;
+    outline: none;
+  }
+}
+
+@keyframes Avatar-animate {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    width: 50px;
+    height: 50px;
+  }
+  60% {
+    width: 40px;
+    height: 40px;
+  }
+  70% {
+    width: 50px;
+    height: 50px;
+  }
+  80% {
+    width: 45px;
+    height: 45px;
+  }
+  90% {
+    width: 50px;
+    height: 50px;
+  }
+  95% {
+    width: 47px;
+    height: 47px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes Avatar-user {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
